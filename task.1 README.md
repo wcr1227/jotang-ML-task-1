@@ -8,8 +8,6 @@
 
 PyTorch手搓线性回归：根据研究生申请信息预测录取概率课题
 
-源课题https://hcnke4ufanhb.feishu.cn/wiki/QTS8wRoD1iNhjkk0rZ7cUE8hnnm#IhrNdjehto2pdGxQJ6UcPezpnAb
-
 其中包括：数据集 :  Admission_Predict.csv
 
 ​                   .ipynb(jupyter文件版):   LR_jupyter.ipynb(方便执行分段)
