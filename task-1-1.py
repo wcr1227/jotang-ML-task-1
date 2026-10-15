@@ -13,6 +13,21 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 
+
+#设置中文字体（补充修改）
+
+# ============ 1.1 让图里能显示中文 ============
+
+plt.rcParams["font.sans-serif"] = [
+    "Microsoft YaHei",   # Windows 微软雅黑
+    "SimHei",            # Windows 黑体
+    "PingFang SC",       # Mac 苹方
+    "Noto Sans CJK SC",  # Linux 常用
+    "WenQuanYi Zen Hei", # Linux 文泉驿
+]
+plt.rcParams["axes.unicode_minus"] = False   # 让负号正常显示，不然负号也会变方框
+
+
 # ============ 2. 固定随机种子============
 def set_seed(seed=42):
     random.seed(seed)
@@ -28,7 +43,7 @@ print("使用设备：", device)
 X, y = make_moons(n_samples=2000, noise=0.2, random_state=42)
 # n_samples=2000 ：总共生成2000个样本
 # noise=0.2 ：给数据加高斯噪声，数值越大点越散乱，0就是完美光滑月牙
-# random_state=42 ：固定随机种子，每次运行代码生成一模一样的数据（实验可复现）
+# random_state=42 ：固定随机种子，每次运行代码生成一模一样的数据
 
 
 
@@ -61,7 +76,6 @@ print(f"训练集 {len(X_train)}，验证集 {len(X_val)}，测试集 {len(X_tes
 # 标准化
 
 # 这里是从学习资料LR_jupyter.ipynb的代码中学习摘录的
-
 
 # 为什么要标准化？
 # 不同特征的量纲和取值范围可能不同：
